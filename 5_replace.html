@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*
+        string.replace(''或者放正则,'替换字符'或者放函数)  替换
+
+        过滤敏感词
+    */    
+//    let str = '1珠266枫3';
+//    console.log(str.replace('枫','峰'));
+
+    // console.log(str.replace(/\d+/g,''));
+
+   
+    console.log(str.replace(/|哈|黑/g,function($0){
+        // console.log($0);
+        let temp = '';
+        for(let i=0;i<$0.length;i++){
+            temp += '*';
+        }
+        return temp;
+    }));
+
+
+
+</script>
+</body>
+</html>
